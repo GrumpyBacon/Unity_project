@@ -8,20 +8,23 @@ public class Bell_movement : MonoBehaviour
     private void Update()
     {
         
-        if (hit) {transform.Translate(Vector3.up *0.125f); }
+        if (hit == true) {transform.Translate(Vector3.up *0.3f); }
     }
 
     private void OnCollisionEnter(Collision collision)
     {
+       
 
         if (collision.gameObject.name == "seesawplank")
         {
             hit = true;
         }
 
-        while (collision.gameObject.name == "cube123")
+        if (collision.gameObject.name == "cube123")
         {
+            
             hit = false;
+            gameObject.transform.position = gameObject.transform.position;
         }
 
     }
