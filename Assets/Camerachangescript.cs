@@ -16,7 +16,7 @@ public class Camerachangescript : MonoBehaviour
         {
             camChange.incrementplace();
         }
-        Debug.Log("Hi");
+        //Debug.Log("Hi");
 
     }
 

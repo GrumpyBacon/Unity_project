@@ -15,6 +15,11 @@ public class Camera_Movement : MonoBehaviour
     public float smoothspeed = 0.125f;
     public Vector3 offset;
 
+
+
+
+
+
     private void Awake()
     {
         //sceneMainCamera = gameObject.GetComponent<Camera>();
@@ -25,6 +30,7 @@ public class Camera_Movement : MonoBehaviour
         switch (Cameranumber)
         {
             case 0:
+
                 CameraTarget();
                 Vector3 desiredPosition = target.position + offset;
                 Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothspeed);
@@ -46,7 +52,7 @@ public class Camera_Movement : MonoBehaviour
 
             default:
 
-                Debug.Log("camera change error");
+                //Debug.Log("camera change error");
                 break;
 
 
@@ -72,7 +78,7 @@ public class Camera_Movement : MonoBehaviour
 
     public void incrementplace()
     {
-        Debug.Log("FDJJDSJFD");
+        //Debug.Log("FDJJDSJFD");
         Cameranumber += 1;
 
 
