@@ -6,12 +6,13 @@ public class Deleteblock : MonoBehaviour {
 
     public GameObject deleteObject;
 
+    public GameObject hit_by;
 
     void OnCollisionEnter(Collision collision)
 
     {
 
-        if (collision.gameObject.name == "bell")
+        if (collision.gameObject == hit_by)
         {
             Destroy(deleteObject);
         }

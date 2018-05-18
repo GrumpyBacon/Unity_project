@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Thust_trigger : MonoBehaviour {
+public class Thrust_trigger_right : MonoBehaviour {
 
     public float speed;
 
@@ -13,14 +13,14 @@ public class Thust_trigger : MonoBehaviour {
     {
 
 
-        if (other.gameObject.tag == "hammer")
+        if (other.gameObject.tag == "Thrust_right")
         {
 
 
             //Debug.Log("hammer");
-            gameObject.GetComponent<Rigidbody>().AddForce(Vector3.up * speed);
+            gameObject.GetComponent<Rigidbody>().AddForce(Vector3.forward * speed);
 
-            
+
 
 
         }

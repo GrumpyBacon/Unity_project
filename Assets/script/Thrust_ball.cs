@@ -16,7 +16,7 @@ public class Thrust_ball : MonoBehaviour {
         if (collision.gameObject.tag == "hammer") {
 
           
-            Debug.Log("hammer");
+            //Debug.Log("hammer");
             gameObject.GetComponent<Rigidbody>().AddForce(Vector3.back * speed);
 
 
