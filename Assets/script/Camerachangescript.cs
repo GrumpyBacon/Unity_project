@@ -8,13 +8,15 @@ public class Camerachangescript : MonoBehaviour
     
     public Camera_Movement camChange;
 
-    public GameObject cameraObject;
+    public GameObject cameraTrigger;
 
-    void OnCollisionEnter(Collision collision)
+    void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.tag == "Cam_change")
+        if (other.gameObject.tag == "Cam_change")
         {
             camChange.incrementplace();
+
+            Destroy(cameraTrigger);
         }
         //Debug.Log("Hi");
 
